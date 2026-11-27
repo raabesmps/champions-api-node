@@ -13,3 +13,7 @@ export async function getPlayerById(req: Request, res: Response) {
   if (id === null) return;
   send(res, await service.getPlayerByIdService(id));
 }
+
+export async function postPlayer(req: Request, res: Response) {
+  send(res, await service.createPlayerService(req.body));
+}

@@ -9,5 +9,6 @@ router.get('/health', (_req, res) => {
 
 router.get('/players', PlayersController.getPlayers);
 router.get('/players/:id', PlayersController.getPlayerById);
+router.post('/players', PlayersController.postPlayer);
 
 export default router;
