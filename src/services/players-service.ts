@@ -59,3 +59,9 @@ export async function updatePlayerStatisticsService(id: number, body: unknown): 
   const [view] = await withClub([updated]);
   return http.ok(view);
 }
+
+/** 204 sem corpo quando remove; 404 quando não existe (na aula: 200 "deleted" ou 400). */
+export async function deletePlayerService(id: number): Promise<HttpResponse> {
+  const deleted = await PlayersRepository.deletePlayer(id);
+  return deleted ? http.noContent() : http.notFound(`Jogador ${id} não encontrado.`);
+}

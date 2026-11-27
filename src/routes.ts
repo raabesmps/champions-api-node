@@ -11,5 +11,6 @@ router.get('/players', PlayersController.getPlayers);
 router.get('/players/:id', PlayersController.getPlayerById);
 router.post('/players', PlayersController.postPlayer);
 router.patch('/players/:id', PlayersController.updatePlayer);
+router.delete('/players/:id', PlayersController.deletePlayer);
 
 export default router;

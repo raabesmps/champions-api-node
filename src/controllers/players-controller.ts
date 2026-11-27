@@ -23,3 +23,9 @@ export async function updatePlayer(req: Request, res: Response) {
   if (id === null) return;
   send(res, await service.updatePlayerStatisticsService(id, req.body));
 }
+
+export async function deletePlayer(req: Request, res: Response) {
+  const id = readId(req, res);
+  if (id === null) return;
+  send(res, await service.deletePlayerService(id));
+}
