@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm audit --omit=dev
+      - run: npm run dist
+      - name: servidor de produção responde
+        run: |
+          PORT=4000 node dist/server.js &
+          for i in $(seq 1 20); do curl -fs http://localhost:4000/api/health && break; sleep 0.5; done
+          curl -fs http://localhost:4000/api/players | grep -q "Mbapp"
+          curl -fs "http://localhost:4000/api/players/compare?ids=1,7" | grep -q verdict
+          curl -fs http://localhost:4000/api/clubs | grep -q Benfica
