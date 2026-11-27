@@ -15,7 +15,26 @@
   "engines": {
     "node": ">=22.9"
   },
-  "keywords": ["nodejs", "express", "typescript", "rest-api", "dio", "champions-league"],
+  "keywords": [
+    "nodejs",
+    "express",
+    "typescript",
+    "rest-api",
+    "dio",
+    "champions-league"
+  ],
   "author": "raabesmps",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.20.7",
+    "tsup": "^9.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
 }
