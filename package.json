@@ -1,6 +1,6 @@
 {
   "name": "champions-api-node",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "API REST da Champions League com Node.js, Express e TypeScript em camadas: desafio de projeto da DIO.",
   "type": "module",
   "main": "dist/server.js",
