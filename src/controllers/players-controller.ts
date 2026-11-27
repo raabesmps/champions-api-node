@@ -17,3 +17,9 @@ export async function getPlayerById(req: Request, res: Response) {
 export async function postPlayer(req: Request, res: Response) {
   send(res, await service.createPlayerService(req.body));
 }
+
+export async function updatePlayer(req: Request, res: Response) {
+  const id = readId(req, res);
+  if (id === null) return;
+  send(res, await service.updatePlayerStatisticsService(id, req.body));
+}
