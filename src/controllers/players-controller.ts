@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express';
 import * as service from '../services/players-service';
+import { comparePlayersService } from '../services/compare-service';
 import { readId, send } from './send';
 
 /* CONTROLLER DE JOGADORES: lê a requisição, chama o service e devolve a resposta. */
@@ -31,4 +32,8 @@ export async function deletePlayer(req: Request, res: Response) {
   const id = readId(req, res);
   if (id === null) return;
   send(res, await service.deletePlayerService(id));
+}
+
+export async function comparePlayers(req: Request, res: Response) {
+  send(res, await comparePlayersService(req.query.ids));
 }

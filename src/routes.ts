@@ -9,6 +9,8 @@ router.get('/health', (_req, res) => {
 });
 
 router.get('/players', PlayersController.getPlayers);
+// /players/compare vem antes de /players/:id, senão "compare" seria lido como um id.
+router.get('/players/compare', PlayersController.comparePlayers);
 router.get('/players/:id', PlayersController.getPlayerById);
 router.post('/players', PlayersController.postPlayer);
 router.patch('/players/:id', PlayersController.updatePlayer);
