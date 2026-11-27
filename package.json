@@ -1,0 +1,21 @@
+{
+  "name": "champions-api-node",
+  "version": "0.1.0",
+  "description": "API REST da Champions League com Node.js, Express e TypeScript em camadas: desafio de projeto da DIO.",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "start:dev": "tsx --env-file-if-exists=.env src/server.ts",
+    "start:watch": "tsx watch --env-file-if-exists=.env src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "dist": "tsup",
+    "start:dist": "npm run dist && node --env-file-if-exists=.env dist/server.js",
+    "test": "node --import tsx --test \"test/**/*.test.ts\""
+  },
+  "engines": {
+    "node": ">=22.9"
+  },
+  "keywords": ["nodejs", "express", "typescript", "rest-api", "dio", "champions-league"],
+  "author": "raabesmps",
+  "license": "MIT"
+}

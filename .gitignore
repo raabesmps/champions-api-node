@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+# dados gravados em tempo de execução (a semente fica em data/seed/)
+data/*.json
