@@ -1,0 +1,290 @@
+[
+  {
+    "id": 1,
+    "name": "Kylian Mbappé",
+    "clubId": 1,
+    "nationality": "França",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 91,
+      "pace": 97,
+      "shooting": 92,
+      "passing": 80,
+      "dribbling": 92,
+      "defending": 36,
+      "physical": 78
+    }
+  },
+  {
+    "id": 2,
+    "name": "Vinícius Júnior",
+    "clubId": 1,
+    "nationality": "Brasil",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 89,
+      "pace": 95,
+      "shooting": 84,
+      "passing": 81,
+      "dribbling": 91,
+      "defending": 29,
+      "physical": 69
+    }
+  },
+  {
+    "id": 3,
+    "name": "Jude Bellingham",
+    "clubId": 1,
+    "nationality": "Inglaterra",
+    "position": "Meio-campista",
+    "statistics": {
+      "overall": 89,
+      "pace": 79,
+      "shooting": 86,
+      "passing": 85,
+      "dribbling": 88,
+      "defending": 78,
+      "physical": 83
+    }
+  },
+  {
+    "id": 4,
+    "name": "Lamine Yamal",
+    "clubId": 2,
+    "nationality": "Espanha",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 88,
+      "pace": 88,
+      "shooting": 80,
+      "passing": 84,
+      "dribbling": 91,
+      "defending": 30,
+      "physical": 60
+    }
+  },
+  {
+    "id": 5,
+    "name": "Raphinha",
+    "clubId": 2,
+    "nationality": "Brasil",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 89,
+      "pace": 90,
+      "shooting": 86,
+      "passing": 83,
+      "dribbling": 89,
+      "defending": 48,
+      "physical": 72
+    }
+  },
+  {
+    "id": 6,
+    "name": "Pedri",
+    "clubId": 2,
+    "nationality": "Espanha",
+    "position": "Meio-campista",
+    "statistics": {
+      "overall": 88,
+      "pace": 77,
+      "shooting": 74,
+      "passing": 88,
+      "dribbling": 89,
+      "defending": 70,
+      "physical": 68
+    }
+  },
+  {
+    "id": 7,
+    "name": "Erling Haaland",
+    "clubId": 8,
+    "nationality": "Noruega",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 90,
+      "pace": 87,
+      "shooting": 93,
+      "passing": 70,
+      "dribbling": 79,
+      "defending": 45,
+      "physical": 88
+    }
+  },
+  {
+    "id": 8,
+    "name": "Mohamed Salah",
+    "clubId": 6,
+    "nationality": "Egito",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 90,
+      "pace": 89,
+      "shooting": 88,
+      "passing": 84,
+      "dribbling": 88,
+      "defending": 44,
+      "physical": 75
+    }
+  },
+  {
+    "id": 9,
+    "name": "Alisson",
+    "clubId": 6,
+    "nationality": "Brasil",
+    "position": "Goleiro",
+    "statistics": {
+      "overall": 89,
+      "pace": 55,
+      "shooting": 20,
+      "passing": 75,
+      "dribbling": 50,
+      "defending": 30,
+      "physical": 85
+    }
+  },
+  {
+    "id": 10,
+    "name": "Virgil van Dijk",
+    "clubId": 6,
+    "nationality": "Países Baixos",
+    "position": "Zagueiro",
+    "statistics": {
+      "overall": 89,
+      "pace": 78,
+      "shooting": 60,
+      "passing": 71,
+      "dribbling": 72,
+      "defending": 91,
+      "physical": 86
+    }
+  },
+  {
+    "id": 11,
+    "name": "Bukayo Saka",
+    "clubId": 7,
+    "nationality": "Inglaterra",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 88,
+      "pace": 85,
+      "shooting": 83,
+      "passing": 85,
+      "dribbling": 88,
+      "defending": 61,
+      "physical": 70
+    }
+  },
+  {
+    "id": 12,
+    "name": "Gabriel Magalhães",
+    "clubId": 7,
+    "nationality": "Brasil",
+    "position": "Zagueiro",
+    "statistics": {
+      "overall": 86,
+      "pace": 72,
+      "shooting": 48,
+      "passing": 64,
+      "dribbling": 64,
+      "defending": 88,
+      "physical": 87
+    }
+  },
+  {
+    "id": 13,
+    "name": "Declan Rice",
+    "clubId": 7,
+    "nationality": "Inglaterra",
+    "position": "Meio-campista",
+    "statistics": {
+      "overall": 87,
+      "pace": 74,
+      "shooting": 76,
+      "passing": 84,
+      "dribbling": 80,
+      "defending": 84,
+      "physical": 83
+    }
+  },
+  {
+    "id": 14,
+    "name": "Harry Kane",
+    "clubId": 12,
+    "nationality": "Inglaterra",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 90,
+      "pace": 70,
+      "shooting": 94,
+      "passing": 84,
+      "dribbling": 82,
+      "defending": 48,
+      "physical": 82
+    }
+  },
+  {
+    "id": 15,
+    "name": "Ousmane Dembélé",
+    "clubId": 20,
+    "nationality": "França",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 90,
+      "pace": 93,
+      "shooting": 85,
+      "passing": 84,
+      "dribbling": 91,
+      "defending": 38,
+      "physical": 66
+    }
+  },
+  {
+    "id": 16,
+    "name": "Marquinhos",
+    "clubId": 20,
+    "nationality": "Brasil",
+    "position": "Zagueiro",
+    "statistics": {
+      "overall": 86,
+      "pace": 75,
+      "shooting": 52,
+      "passing": 74,
+      "dribbling": 70,
+      "defending": 88,
+      "physical": 79
+    }
+  },
+  {
+    "id": 17,
+    "name": "Achraf Hakimi",
+    "clubId": 20,
+    "nationality": "Marrocos",
+    "position": "Lateral",
+    "statistics": {
+      "overall": 87,
+      "pace": 92,
+      "shooting": 74,
+      "passing": 81,
+      "dribbling": 82,
+      "defending": 79,
+      "physical": 78
+    }
+  },
+  {
+    "id": 18,
+    "name": "Lautaro Martínez",
+    "clubId": 16,
+    "nationality": "Argentina",
+    "position": "Atacante",
+    "statistics": {
+      "overall": 88,
+      "pace": 81,
+      "shooting": 88,
+      "passing": 75,
+      "dribbling": 85,
+      "defending": 52,
+      "physical": 82
+    }
+  }
+]
