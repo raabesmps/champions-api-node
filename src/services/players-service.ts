@@ -1,10 +1,10 @@
 import type { HttpResponse } from '../models/http-response-model';
-import type { PlayerModel, PlayerView } from '../models/player-model';
+import { POSITIONS, type PlayerModel, type PlayerView } from '../models/player-model';
 import * as ClubsRepository from '../repositories/clubs-repository';
 import * as PlayersRepository from '../repositories/players-repository';
 import * as http from '../utils/http-helper';
 import { normalize } from '../utils/text';
-import { validateNewPlayer, validateStatisticsUpdate } from './player-validator';
+import { parsePosition, validateNewPlayer, validateStatisticsUpdate } from './player-validator';
 
 /* SERVICE DE JOGADORES: regras de negócio e escolha do status HTTP. */
 
@@ -14,10 +14,32 @@ async function withClub(players: PlayerModel[]): Promise<PlayerView[]> {
   return players.map((p) => ({ ...p, club: clubs.get(p.clubId) ?? 'Sem clube' }));
 }
 
-export async function getPlayersService(): Promise<HttpResponse> {
-  const players = await PlayersRepository.findAllPlayers();
+export interface PlayerFilter {
+  club?: string;
+  position?: string;
+  nationality?: string;
+}
+
+/** Filtros opcionais: ?club= (id ou nome), ?position= e ?nationality=, sem diferenciar acentos. */
+export async function getPlayersService(filter: PlayerFilter = {}): Promise<HttpResponse> {
+  let position: string | undefined;
+  if (filter.position) {
+    position = parsePosition(filter.position);
+    if (!position) return http.badRequest(`Posição "${filter.position}" inválida. Use: ${POSITIONS.join(', ')}.`);
+  }
+
+  const players = await withClub(await PlayersRepository.findAllPlayers());
+  const club = filter.club ? normalize(filter.club) : '';
+  const nationality = filter.nationality ? normalize(filter.nationality) : '';
+
+  const result = players.filter(
+    (p) =>
+      (!club || String(p.clubId) === club || normalize(p.club) === club) &&
+      (!position || p.position === position) &&
+      (!nationality || normalize(p.nationality) === nationality),
+  );
   // Lista vazia também é 200: a consulta deu certo, só não há itens.
-  return http.ok(await withClub(players));
+  return http.ok(result);
 }
 
 export async function getPlayerByIdService(id: number): Promise<HttpResponse> {

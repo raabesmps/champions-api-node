@@ -4,8 +4,11 @@ import { readId, send } from './send';
 
 /* CONTROLLER DE JOGADORES: lê a requisição, chama o service e devolve a resposta. */
 
-export async function getPlayers(_req: Request, res: Response) {
-  send(res, await service.getPlayersService());
+const queryText = (value: unknown) => (typeof value === 'string' && value.trim() ? value : undefined);
+
+export async function getPlayers(req: Request, res: Response) {
+  const { club, position, nationality } = req.query;
+  send(res, await service.getPlayersService({ club: queryText(club), position: queryText(position), nationality: queryText(nationality) }));
 }
 
 export async function getPlayerById(req: Request, res: Response) {
